@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useAppContext } from '../../context/AuthContext';
 
 export default function Navbar() {
+    const {userName} = useAppContext();
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" href="/">GiftLink</a>
@@ -15,7 +19,10 @@ export default function Navbar() {
                     </li>   
                     <li className="nav-item">
                         <Link className="nav-link" to="/app/search">Search</Link>
-                    </li>                                
+                    </li>    
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/app/search">user: {userName||" test"}</Link>
+                    </li>                              
                      </ul>
             </div>
         </nav>

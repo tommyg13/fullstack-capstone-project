@@ -43,6 +43,10 @@
 .fas.fa-arrow-right {
     margin-left: 5px;
 }
+
+img{
+    max-width: 100%;
+}
 .card-img-top {
     width: 100%; /* Full width */
     height: 180px; /* Fixed height */
